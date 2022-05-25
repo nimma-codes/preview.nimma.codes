@@ -1,0 +1,11 @@
+footer {
+  @extend .inverted;
+  background-color: $azure-blue;
+
+  text-align: center;
+  padding: 48px 0;
+
+  img {
+    height: 40px;
+  }
+}

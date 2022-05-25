@@ -1,0 +1,25 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" type="image/png" href="/images/icons-192.png">
+    {{ $styles := resources.Get "style.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
+    {{ $title := print .Title " | " .Site.Title }}
+    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    <title>{{ $title }}</title>
+
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:url" content="{{ .Permalink | absURL }}">
+    <meta property="og:description" content="{{ .Description }}">
+    <meta property="og:type" content="restaurant.menu_item">
+    {{ $img := (.Resources.ByType "image").GetMatch "images/*featured*" }}
+    {{ with $img }}
+    <meta property="og:image" content="{{ .Permalink | absURL }}">
+    {{ end }}
+
+    <style>
+
+    </style>
+</head>

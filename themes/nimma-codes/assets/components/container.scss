@@ -1,0 +1,13 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &.text {
+    max-width: 900px;
+  }
+
+  &.centered {
+    text-align: center;
+  }
+}

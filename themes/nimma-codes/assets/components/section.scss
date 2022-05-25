@@ -1,0 +1,27 @@
+section {
+  padding: 24px 0 36px 0;
+  display: flex;
+
+  // Display rows on wide screens
+  @media screen and (min-width: 800px) {
+    &.flex-invert-on-wide {
+      flex-direction: row-reverse;
+    }
+    &:not(.flex-invert-on-wide) {
+      flex-direction: row;
+    }
+    & > * {
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+
+    & > :not(:first-child) {
+      margin-left: 36px;
+    }
+  }
+
+  // Displays columns on small screens
+  @media screen and (max-width: 799px) {
+    flex-direction: column;
+  }
+}

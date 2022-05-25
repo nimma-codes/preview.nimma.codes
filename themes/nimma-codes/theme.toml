@@ -1,0 +1,18 @@
+name = "NimmaCodes"
+license = "APACHE-2.0"
+licenselink = "https://github.com/nimma-codes/preview.nimma.codes/blob/main/LICENSE"
+description = ""
+homepage = "https://preview.nimma.codes"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = ""
+  homepage = ""
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

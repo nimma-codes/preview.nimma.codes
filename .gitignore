@@ -1,0 +1,6 @@
+### JETBRAINS ###
+.idea/
+
+### PROJECT ###
+resources/_gen/
+public/

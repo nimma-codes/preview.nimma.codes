@@ -1,0 +1,6 @@
+baseURL = 'https://preview.nimma.codes'
+languageCode = 'nl-NL'
+title = 'Nimma.codes'
+theme = "nimma-codes"
+[params]
+  github_source = 'https://github.com/nimma-codes/preview.nimma.codes'
