@@ -12,10 +12,7 @@
     <meta property="og:url" content="{{ .Permalink | absURL }}">
     <meta property="og:description" content="{{ .Description }}">
     <meta property="og:type" content="restaurant.menu_item">
-    {{ $img := (.Resources.ByType "image").GetMatch "images/*featured*" }}
-    {{ with $img }}
-    <meta property="og:image" content="{{ .Permalink | absURL }}">
-    {{ end }}
+    <meta property="og:image" content="{{ "/images/og_img.png" | absURL}}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
