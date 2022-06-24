@@ -1,8 +1,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="shortcut icon" type="image/png" href="/images/icons-192.png">
     {{ $styles := resources.Get "style.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}">
     {{ $title := print .Title " | " .Site.Title }}
@@ -18,6 +16,16 @@
     {{ with $img }}
     <meta property="og:image" content="{{ .Permalink | absURL }}">
     {{ end }}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0077ff">
+    <meta name="apple-mobile-web-app-title" content="Nimma.codes">
+    <meta name="application-name" content="Nimma.codes">
+    <meta name="msapplication-TileColor" content="#fafafa">
+    <meta name="theme-color" content="#0077ff">
 
     <style>
 
