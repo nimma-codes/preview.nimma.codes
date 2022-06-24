@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: sed -i .bak 's|https://preview.nimma.codes|https://www.nimma.codes' config.toml
+      - run: sed -i 's|https://preview.nimma.codes|https://www.nimma.codes|' config.toml
       - uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.97.2'
