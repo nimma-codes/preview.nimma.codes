@@ -10,8 +10,7 @@
     <meta property="og:title" content="{{ $title }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:url" content="{{ .Permalink | absURL }}">
-    <meta property="og:description" content="{{ .Description }}">
-    <meta property="og:type" content="restaurant.menu_item">
+    <meta property="og:description" content="{{ .Site.Params.description }}">
     <meta property="og:image" content="{{ "/images/og_img.png" | absURL}}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

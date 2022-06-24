@@ -4,3 +4,4 @@ title = 'Nimma.codes'
 theme = "nimma-codes"
 [params]
   github_source = 'https://github.com/nimma-codes/preview.nimma.codes'
+  description = 'Een cross-language user group voor software developers in de regio Arnhem-Nijmegen'
