@@ -15,7 +15,7 @@ jobs:
       - run: hugo --minify
       - uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.WWW_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.WWW_DEPLOY_KEY }}
           external_repository: nimma-codes/www.nimma.codes
           publish_dir: ./public
           cname: www.nimma.codes
