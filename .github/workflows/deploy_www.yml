@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  build_docker:
+    name: Deploy www
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: sed -i .bak 's|https://preview.nimma.codes|https://www.nimma.codes' config.toml
+      - uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.97.2'
+          extended: true
+      - run: hugo --minify
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: nimma-codes/www.nimma.codes
+          publish_dir: ./public
+          cname: www.nimma.codes
