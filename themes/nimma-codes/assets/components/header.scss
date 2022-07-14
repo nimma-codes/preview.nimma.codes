@@ -1,12 +1,19 @@
 header {
   border-bottom: 2px solid $azure-blue;
   .container {
+    display: flex;
+    justify-content: space-between;
     padding: 12px;
 
      a {
        img  {
          height: 48px;
        }
+     }
+
+     .ctas {
+        display: flex;
+        align-items: center;
      }
   }
 }
