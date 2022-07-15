@@ -1,0 +1,30 @@
+.button {
+    display: flex;
+    align-items: center;
+    border: 1px solid $azure-blue;
+    border-radius: 16px;
+
+    font-size: 18px;
+    padding: 12px 18px;
+    margin: 25px 0;
+
+    img {
+        height: 16px !important;
+        margin-right: 10px;
+    }
+
+    @media screen and (max-width: 800px) {
+        padding: 8px 10px;
+        border-radius: 12px;
+    }
+
+    &:hover {
+        background-color: $azure-blue;
+        color: $pure-white;
+        text-decoration: none;
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+}
