@@ -1,40 +1,9 @@
 {{ define "main" }}
-<div class="text container">
-    <div class="stack segment">
-        <h1>{{ .Title }}</h1>
+<div class="container">
+    <h1>{{ .Title }}</h1>
+</div>
 
-        {{ .Description }}
-
-        <div style="clear: both"></div>
-
-        {{ $img := (.Resources.ByType "image").GetMatch "images/*featured*" }}
-        {{ with $img }}
-        <img src="{{ .Permalink }}" alt="{{ $.Title }}" style="margin-top: 1.5em">
-        {{ end }}
-
-        <h1>Ingrediënten</h1>
-
-        <ul>
-            {{ range .Params.ingredients }}
-            <li>{{ . }}</li>
-            {{ end }}
-        </ul>
-        <div style="clear: both"></div>
-    </div>
-
-    <div class="share buttons">
-        <button onclick="window.print()">
-            <i class="fas fa-print"></i> <span>Print/PDF</span>
-        </button>
-        <button class="share button" onclick="navigator.share({url: window.location})">
-            <i class="fas fa-share-from-square"></i> <span>Share</span>
-        </button>
-    </div>
-
-
-    <div class="segment">
-        {{ .Content }}
-    </div>
-
+<div class="container">
+    {{ .Content }}
 </div>
 {{ end }}

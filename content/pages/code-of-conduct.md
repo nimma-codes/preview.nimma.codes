@@ -1,4 +1,7 @@
-# Contributor Covenant Gedragscode (Code of Conduct)
+---
+title: Contributor Covenant Gedragscode (Code of Conduct)
+date: 2022-08-11
+---
 
 ## Onze belofte
 
