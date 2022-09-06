@@ -19,20 +19,31 @@ header {
       align-items: center;
     }
 
+
     .ctaContainer {
       display: flex;
-      column-gap: 24px;
+      column-gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   header {
-    .container {
-      justify-content: center;
-      padding-top: 32px;
-      column-gap: 40px;
+      .container {
+        justify-content: center;
+        padding-top: 32px;
+
+        .ctas .button {
+          margin: 8px;
+        }
+    
+        .ctaContainer {
+          margin-top: 24px;
+          column-gap: 0px;
+        }
+      }
     }
-  }
 
 }
