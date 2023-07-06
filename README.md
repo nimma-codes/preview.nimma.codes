@@ -9,10 +9,17 @@ Het enige wat je nodig hebt om deze website te bouwen is [Hugo v0.97+ (extended)
 Vervolgens run je `hugo server` in the root van deze repository.
 De website is nu live op http://localhost:1313/.
 
+### Met Docker
+
+Als je Docker gebruikt, kan je eenvoudig Hugo draaien met dit command:
+
+```shell
+docker run --rm -it -p "1313:1313" -v "$PWD:/src" klakegg/hugo:0.97.3-ext server
+```
+
 ## De website online previewen
 
 Wanneer je je changes klaar hebt kun je een PR maken op deze repo.
 Zodra deze PR gemerged is naar de main branch zal hij uitgerold worden op https://preview.nimma.codes.
 
 Wanneer de beheerders van de website tevreden zijn met de changes zullen ze de changes publiceren naar https://www.nimma.codes.
-

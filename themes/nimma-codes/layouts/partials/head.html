@@ -13,6 +13,13 @@
     <meta property="og:description" content="{{ .Site.Params.description }}">
     <meta property="og:image" content="{{ "/images/og_img.png" | absURL}}">
 
+    <!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:site" content="{{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:image" content="{{ "/images/og_img.png" | absURL}}">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,8 +29,4 @@
     <meta name="application-name" content="Nimma.codes">
     <meta name="msapplication-TileColor" content="#fafafa">
     <meta name="theme-color" content="#0077ff">
-
-    <style>
-
-    </style>
 </head>
