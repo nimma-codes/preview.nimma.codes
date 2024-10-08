@@ -8,13 +8,13 @@ jobs:
     name: Deploy Preview
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.97.2'
+          hugo-version: "0.97.2"
           extended: true
       - run: hugo --minify
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

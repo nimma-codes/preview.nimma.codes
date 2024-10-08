@@ -6,14 +6,14 @@ jobs:
     name: Deploy www
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: sed -i 's|https://preview.nimma.codes|https://www.nimma.codes|' config.toml
-      - uses: peaceiris/actions-hugo@v2
+      - uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.97.2'
+          hugo-version: "0.97.2"
           extended: true
       - run: hugo --minify
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.WWW_DEPLOY_KEY }}
           external_repository: nimma-codes/www.nimma.codes
