@@ -4,6 +4,17 @@
 </div>
 
 <div class="container">
+  {{- with .Date }}
+    <time datetime="{{ . }}">{{ . | time.Format "Jan '06" }}</time>
+  {{- end }}
     {{ .Content }}
+</div>
+
+<div class="container">
+  {{- if .Params.tags }}
+    {{- range .Params.tags }}
+    #<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+    {{- end }}
+  {{- end }}
 </div>
 {{ end }}
