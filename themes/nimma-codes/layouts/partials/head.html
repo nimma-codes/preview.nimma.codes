@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{ $styles := resources.Get "style.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+    {{ $styles := resources.Get "style.scss" | css.Sass (dict "outputStyle" "compressed") | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}">
     {{ $title := print .Title " | " .Site.Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}

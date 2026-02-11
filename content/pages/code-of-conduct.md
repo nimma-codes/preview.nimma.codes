@@ -41,7 +41,7 @@ Voorbeelden van het vertegenwoordigen van onze community zijn onder meer het geb
 
 ## Handhaving
 
-Beledigend, intimiderend of anderszins onaanvaardbaar gedrag kan gerapporteerd worden aan de communityleiders die verantwoordelijk zijn voor handhaving via <a href="mailto:info@nimma.codes">info@nimma.codes</a>.
+Beledigend, intimiderend of anderszins onaanvaardbaar gedrag kan gerapporteerd worden aan de communityleiders die verantwoordelijk zijn voor handhaving via [info@nimma.codes](mailto:info@nimma.codes).
 Alle klachten zullen onmiddellijk en eerlijk worden beoordeeld en onderzocht.
 
 Alle communityleiders zijn verplicht om de privacy en veiligheid van de melder van een incident te respecteren.

@@ -1,0 +1,12 @@
+th {
+    text-align: left;
+}
+
+th, td {
+    padding: 0 16px 0 0;
+    vertical-align: top;
+}
+
+td:first-child {
+    white-space: nowrap;
+}
