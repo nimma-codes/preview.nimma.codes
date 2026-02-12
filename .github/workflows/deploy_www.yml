@@ -4,13 +4,13 @@ on:
 jobs:
   build_docker:
     name: Deploy www
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: sed -i 's|https://preview.nimma.codes|https://www.nimma.codes|' config.toml
       - uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.97.2"
+          hugo-version: "latest"
           extended: true
       - run: hugo --minify
       - uses: peaceiris/actions-gh-pages@v4
